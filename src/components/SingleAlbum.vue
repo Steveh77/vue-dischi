@@ -4,6 +4,7 @@
         <h5>{{ title }}</h5>
         <h6>{{ author }}</h6>
         <h6>{{ year }}</h6>
+        <h6>{{ genre }}</h6>
     </div>
 </template>
 
@@ -14,7 +15,8 @@ export default {
         poster: String,
         title: String,
         author: String,
-        year: String
+        year: String,
+        genre: String
     }
 }
 

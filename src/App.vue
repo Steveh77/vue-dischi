@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MyHeader/>
-    <MyMain/>
+    <MyHeader :geners-list="genersList" @genre-change="setSelectGenre" />
+    <MyMain :select-genre="selectGenre" />
   </div>
 </template>
 
@@ -15,7 +15,18 @@ export default {
   components: {
     MyHeader,
     MyMain
-}
+  },
+  data() {
+    return {
+      selectGenre: "",
+      genersList: ['Rock', 'Pop', 'Metal']
+    }
+  },
+  methods: {
+    setSelectGenre(genre) {
+      this.selectGenre = genre;
+    }
+  },
 }
 </script>
 
